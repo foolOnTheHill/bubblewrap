@@ -1,0 +1,43 @@
+#game {
+	margin-top: 2%;
+}
+
+.dcell {
+	width: 80px;
+	height: 80px;
+	margin: 2px;
+	background-color: #39CCCC;
+	border-radius: 100%;
+}
+
+.ucell {
+	width: 80px;
+	height: 80px;
+	margin: 2px;
+	background-color: #FF4136;
+	border-radius: 100%;
+}
+
+.game_row {
+	display: inline-block;
+	margin: 0 auto 0 auto;
+}
+
+#logo {
+	font-family: 'Pacifico', 'cursive';
+	color: #39CCCC;
+	font-size: 3em;
+}
+
+#header {
+	margin-top: 2%;
+	margin-bottom: 4%;
+}
+
+#footer {
+	margin-top: 2%;
+}
+
+#footer p {
+	font-family: 'Pacifico', 'cursive';
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bubble wrap</title>
+
+    <link href="resources/css/colors.min.css" rel="stylesheet"/>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="resources/css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div id="header" class="container">
+        <h1 id="logo" class="text-center">bubble wrap</h1>
+    </div>
+    
+    <div id="statistics" class="container">
+      <h4 class="text-center"><span class="label label-default">Clicks:</span> <span id="clicks" class="badge">0</span></h4>
+      <h4 class="text-center"><span class="label label-default">Completed:</span> <span id="completed" class="badge">0%</span></h4>
+      <h4 class="text-center hidden" id="timeLabel"><span class="label label-default">Total time:</span> <span id="time" class="badge"></span></h4>
+      <br>
+      <button class="btn btn-primary center-block" id="start">start</button>
+      <button class="btn btn-primary center-block hidden" id="stop">stop</button>
+    </div>
+
+    <div id="game" class="container"></div>
+
+    <div id="footer" class="container">
+      <p class="text-center">Based on a idea found <a href="http://robotacid.com/js/cross_button_puzzle/">here</a>.
+      <p class="text-center">Made just for fun. :)</p>
+    </div>
+
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <!--Some kind of magic-->
+    <script src="resources/js/game.js"></script>
+  
+  </body>
+
+</html>
