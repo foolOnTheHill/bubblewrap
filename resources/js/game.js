@@ -98,7 +98,7 @@ function check() {
 		}
 	}
 
-	if (count === 9) {
+	if (count === (dim*dim)) {
 		dim += 1;
 		setGame(dim);
 	}
