@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>bubble wrap</title>
 
     <link href="resources/css/colors.min.css" rel="stylesheet"/>
@@ -16,25 +17,39 @@
     <![endif]-->
 
     <link href="resources/css/style.css" rel="stylesheet">
-
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1508851499337828&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div id="header" class="container">
-        <h1 id="logo" class="text-center">bubble wrap</h1>
+        <h1 id="logo" class="text-center">bubble<br>wrap</h1>
     </div>
     
     <div id="statistics" class="container">
-      <h4 class="text-center"><span class="label label-default">Clicks:</span> <span id="clicks" class="badge">0</span></h4>
-      <h4 class="text-center"><span class="label label-default">Completed:</span> <span id="completed" class="badge">0%</span></h4>
-      <h4 class="text-center hidden" id="timeLabel"><span class="label label-default">Total time:</span> <span id="time" class="badge"></span></h4>
+      <div id="scores" class="hidden">
+        <h4 class="text-center"><span class="label label-default">Level</span> <span id="level" class="badge">1</span></h4>
+        <h4 class="text-center"><span class="label label-default">Clicks:</span> <span id="clicks" class="badge">0</span></h4>
+        <h4 class="text-center"><span class="label label-default">Completed:</span> <span id="completed" class="badge">0%</span></h4>
+      </div>
       <br>
       <button class="btn btn-primary center-block" id="start">start</button>
       <button class="btn btn-primary center-block hidden" id="stop">stop</button>
     </div>
 
     <div id="game" class="container"></div>
+
+    <div id="social" class="container">
+      <div class="fb-like" data-href="http://foolonthehill.github.io/bubblewrap/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+    </div>
 
     <div id="footer" class="container">
       <p class="text-center">Based on a idea found <a href="http://robotacid.com/js/cross_button_puzzle/">here</a>.

@@ -31,7 +31,7 @@
 
 #header {
 	margin-top: 2%;
-	margin-bottom: 4%;
+	margin-bottom: 2%;
 }
 
 #footer {
@@ -40,4 +40,12 @@
 
 #footer p {
 	font-family: 'Pacifico', 'cursive';
+}
+
+#social {
+	margin-top: 3%;
+}
+
+.fb-like {
+	margin-left: 42.5%;
 }

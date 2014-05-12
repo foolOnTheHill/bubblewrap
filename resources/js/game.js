@@ -2,19 +2,15 @@ var dim = 3;
 var clicks = 0;
 var started = false;
 
-var initTime;
-var endTime;
-
 $('#start').click(function() {
 	$('#start').addClass('hidden');
 	$('#stop').removeClass('hidden');
-	$('#timeLabel').addClass('hidden');
-
+	$('#scores').removeClass('hidden');
+	
 	document.getElementById('clicks').innerHTML = '0';
 
 	setGame(dim);
 	started = true;
-	initTime = (new Date()).getTime();
 });
 
 $('#stop').click(function() {
@@ -23,12 +19,6 @@ $('#stop').click(function() {
 	started = false;
 	dim = 3;
 	clicks = 0;
-
-	endTime = (new Date()).getTime();	
-	var totalTime = (endTime - initTime)/600;
-
-	document.getElementById('time').innerHTML = totalTime.toFixed(2) + ' seconds';	
-	$('#timeLabel').removeClass('hidden');
 
 	document.getElementById('game').innerHTML = '';
 });
@@ -44,13 +34,19 @@ function setGame(size) {
 		$('#game').append(line);
 	}
 
+	var screenWidth = Math.max(620, $(window).width()-1000);
+	var diam = Math.min(60, Math.round(screenWidth/dim));
+	$('.game_row div').css('width', diam+'px');
+	$('.game_row div').css('height', diam+'px');
+
 	document.getElementById('completed').innerHTML = '0%';
 
-	var offset = Math.max(0, (($(window).width() - (size*80))/2) - 15);
+	var offset = Math.max(0, (($(window).width() - (size*diam))/2) - 15);
 
 	$('#game').css('margin-left', offset);
 	$('#game').focus();
 
+	document.getElementById('level').innerHTML = dim-2;
 }
 
 function play(i, j) {
@@ -110,4 +106,11 @@ function check() {
 function reset() {
 	dim = 3;
 	setGame(3);
+}
+
+function share() {
+	FB.ui({
+	  method: 'share',
+	  href: 'http://foolonthehill.github.io/bubblewrap/',
+	}, function(response){});
 }
